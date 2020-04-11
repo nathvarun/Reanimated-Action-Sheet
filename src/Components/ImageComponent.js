@@ -4,18 +4,11 @@ import { Entypo } from "@expo/vector-icons";
 
 const { width } = Dimensions.get("window");
 
-import { TapGestureHandler } from "react-native-gesture-handler";
-import Animated from "react-native-reanimated";
-
 const ImageComponent = ({ image, gestureHandler }) => {
   return (
     <>
       <View style={{ ...styles.imageHeader }}>
-        <TapGestureHandler {...gestureHandler}>
-          <Animated.View>
-            <Entypo name="dots-three-horizontal" size={24} />
-          </Animated.View>
-        </TapGestureHandler>
+        <Entypo name="dots-three-horizontal" size={24} />
       </View>
       <View style={{ ...styles.imageContainer }}>
         <Image source={image.uri} style={{ ...styles.image }} />
